@@ -12,7 +12,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -28,7 +27,7 @@ jobs:
       - name: Run Build
         run: npm run build
 
-      - name: Upload Artifact
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: dist
@@ -36,6 +35,8 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages   # ✅ Must match the environment you created
 
     steps:
       - name: Deploy to GitHub Pages
