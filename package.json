@@ -4,9 +4,11 @@
   "description": "Website with CI/CD pipeline",
   "scripts": {
     "test": "jest",
-    "build": "mkdir -p dist && cp -r index.html js dist/"
+    "build": "mkdir -p dist && cp -r index.html js dist/ && touch dist/.nojekyll"
+
   },
   "devDependencies": {
     "jest": "^29.0.0"
   }
 }
+
