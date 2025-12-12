@@ -1,0 +1,12 @@
+{
+  "name": "simple-website",
+  "version": "1.0.0",
+  "description": "Website with CI/CD pipeline",
+  "scripts": {
+    "test": "jest",
+    "build": "mkdir -p dist && cp -r index.html js dist/"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}

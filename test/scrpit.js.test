@@ -1,0 +1,5 @@
+const { buttonClicked } = require("../js/script");
+
+test("buttonClicked should return correct message", () => {
+    expect(buttonClicked("Button 1")).toBe("Button 1 was clicked!");
+});

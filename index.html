@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Button Website</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3a86ff;
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #265cc1;
+        }
+
+        #message {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Simple Website</h1>
+    <p>Below are my buttons:</p>
+
+    <div class="button-container">
+        <button onclick="showMessage('Button 1')">Button 1</button>
+<button onclick="showMessage('Button 2')">Button 2</button>
+<button onclick="showMessage('Button 3')">Button 3</button>
+
+    </div>
+
+    <p id="message"></p>
+
+    <!-- INLINE JAVASCRIPT HERE -->
+    <script src="js/script.js"></script>
+<script>
+    function showMessage(name) {
+        document.getElementById("message").innerText = buttonClicked(name);
+    }
+</script>
+
+
+</body>
+</html>
+ 
